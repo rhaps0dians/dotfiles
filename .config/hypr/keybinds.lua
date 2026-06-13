@@ -6,11 +6,8 @@ hl.config({
         kb_model   = "",
         kb_options = "",
         kb_rules   = "",
-
         follow_mouse = 1,
-
-        sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
-
+        sensitivity = 0,
         touchpad = {
             natural_scroll = false,
         },
@@ -34,6 +31,7 @@ hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("noctalia-shell ipc call wallpaper to
 hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
+hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("grim ~/Pictures/$(date +'%s_screenshot.png')"))
 hl.bind("XF86PowerOff", hl.dsp.exec_cmd("noctalia-shell ipc call sessionMenu toggle"))
 
 -- Move focus with mainMod + arrow keys

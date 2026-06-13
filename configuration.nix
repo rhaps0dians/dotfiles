@@ -70,7 +70,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     noctalia-shell noctalia-qs
+     noctalia-shell 
+     noctalia-qs
      nemo
      papirus-icon-theme
      adw-gtk3 
@@ -81,6 +82,7 @@
      fastfetch
      kitty
      brightnessctl
+     grim
      git
   ];
 
